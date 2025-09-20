@@ -2,7 +2,7 @@ import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { MaterialDesignIcons } from '@react-native-vector-icons/material-design-icons';
 import { COLORS, FONTS } from '../utils/constants';
 
-export function RadioButton({ label, icon, selectedValue, onSelect }) {
+export function SecondaryButton({ label, icon, selectedValue, onSelect }) {
     const isSelected = selectedValue === label;
 
     return (
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         borderColor: COLORS.SECONDARY,
         borderRadius: 20,
-        backgroundColor: 'transparent'
+        backgroundColor: COLORS.LIGHTEST
     },
     containerSelected: {
         borderColor: COLORS.PRIMARY
@@ -44,6 +44,9 @@ const styles = StyleSheet.create({
         textTransform: 'capitalize'
     },
     textSelected: {
-        color: COLORS.PRIMARY
+        fontFamily: FONTS.REGULAR,
+        fontSize: 14,
+        color: COLORS.PRIMARY,
+        textTransform: 'capitalize'
     }
 });

@@ -1,7 +1,7 @@
 import { FlatList, StyleSheet } from 'react-native';
 import { useEffect, useState } from 'react';
 import { fetchProducts } from '../services/api';
-import CatalogueItem from '../components/CatalogueItem';
+import { CatalogueItem } from '../components/CatalogueItem';
 import { Loader } from '../components/Loader';
 import { ErrorMessage } from '../components/ErrorMessage';
 import { images } from '../products';
@@ -35,6 +35,7 @@ export function CatalogueScreen() {
                     data={products}
                     renderItem={({ item }) =>
                         <CatalogueItem
+                            id={item.id}
                             image={images[item.id]}
                             title={item.title}
                             price={item.price}

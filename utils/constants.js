@@ -14,6 +14,7 @@ export const COLORS = {
 export const ICONS = {
     CUP: 'coffee',
     CART: 'cart',
+    CART_PLUS: 'cart-plus',
     PROFILE: 'account',
     BEANS: 'seed',
     GROUND: 'coffee-maker-outline',

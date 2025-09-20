@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
-import { RadioButton } from './RadioButton';
+import { SecondaryButton } from './SecondaryButton';
 
 export function RadioButtonGroup({ options }) {
     const [selectedOption, setSelectedOption] = useState(null);
@@ -8,8 +8,8 @@ export function RadioButtonGroup({ options }) {
     return (
         <View style={styles.container}>
             {options.map((option) => (
-                <RadioButton
-                    key={option.label}
+                <SecondaryButton
+                    key={option.id}
                     label={option.label}
                     icon={option.icon}
                     selectedValue={selectedOption}
