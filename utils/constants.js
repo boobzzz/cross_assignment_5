@@ -32,3 +32,10 @@ export const ROUTES = {
     PROFILE: 'Profile',
     DETAILS: 'Details'
 }
+
+export const LABELS = {
+    CATALOGUE: 'Catalogue',
+    CART: 'Cart',
+    PROFILE: 'Profile',
+    DETAILS: 'Details'
+}

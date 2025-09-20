@@ -3,13 +3,13 @@ import { MaterialDesignIcons } from '@react-native-vector-icons/material-design-
 import { ProductStack } from './ProductStack';
 import { CartScreen } from '../screens/CartScreen';
 import { ProfileScreen } from '../screens/ProfileScreen';
-import { COLORS, FONTS, ICONS, ROUTES } from '../utils/constants';
+import { COLORS, FONTS, ICONS, LABELS, ROUTES } from '../utils/constants';
 
 const Tab = createBottomTabNavigator();
 const tabs = [
-    { name: ROUTES.CATALOGUE, icon: ICONS.CUP, component: ProductStack },
-    { name: ROUTES.CART, icon: ICONS.CART, component: CartScreen },
-    { name: ROUTES.PROFILE, icon: ICONS.PROFILE, component: ProfileScreen }
+    { name: ROUTES.PRODUCT, label: LABELS.CATALOGUE, icon: ICONS.CUP, component: ProductStack },
+    { name: ROUTES.CART, label: LABELS.CART, icon: ICONS.CART, component: CartScreen },
+    { name: ROUTES.PROFILE, label: LABELS.PROFILE, icon: ICONS.PROFILE, component: ProfileScreen }
 ];
 
 export function TabNavigator() {
@@ -18,7 +18,7 @@ export function TabNavigator() {
             tabBarActiveTintColor: COLORS.PRIMARY,
             tabBarInactiveTintColor: COLORS.SECONDARY
         }}>
-            {tabs.map(({ name, icon, component }) => (
+            {tabs.map(({ name, label, icon, component }) => (
                 <Tab.Screen name={name} component={component} options={{
                     tabBarIcon: ({ focused }) => (
                         <MaterialDesignIcons
@@ -29,6 +29,7 @@ export function TabNavigator() {
                     ),
                     animation: 'shift',
                     headerShown: false,
+                    tabBarLabel: label,
                     tabBarLabelStyle: {
                         fontFamily: FONTS.REGULAR,
                         fontSize: 12
