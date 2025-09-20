@@ -7,7 +7,8 @@ export const FONTS = {
 export const COLORS = {
     PRIMARY: '#1e1e1e',
     SECONDARY: '#8f9098',
-    LIGHTEST: '#ffffff'
+    LIGHTEST: '#ffffff',
+    ERROR: '#ff6347',
 };
 
 export const ICONS = {

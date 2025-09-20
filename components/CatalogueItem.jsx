@@ -2,7 +2,7 @@ import { StyleSheet, Text, TouchableOpacity, Image, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { COLORS, FONTS, ROUTES } from '../utils/constants';
 
-export function CatalogueItem({ image, title, price }) {
+export default function CatalogueItem({ image, title, price }) {
     const navigation = useNavigation();
 
     return (
